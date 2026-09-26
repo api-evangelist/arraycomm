@@ -1,23 +1,60 @@
 aid: arraycomm
+
 name: Arraycomm
-description: 'Arraycomm is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Arraycomm is a company listed on EquityZen’s secondary market platform. It appears in public listings and has a LinkedIn presence as a technology-focused firm. While detailed product information is limited, the company is recognized as part of the API Evangelist network and is slated for full profiling in the pipeline. Further details about its services, offerings, and API endpoints are pending discovery through additional research and direct site investigation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arraycomm/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Technology
+- API
+- Platform
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/arraycomm
+  - type: Vendors
+    url: vendors/arraycomm-vendors.yml
+  - type: DomainSecurity
+    url: security/arraycomm-domain-security.yml
+  - type: Hosts
+    url: hosts/arraycomm-hosts.yml
+  - type: Website
+    url: https://equityzen.com/company/arraycomm
+  - type: x-coverage
+    url: https://www.arraycomm.com/
+    state: none
+    reason: no-developer-program
+    detail: No public developer program or API documentation was found for Arraycomm.
+    evidence:
+      - url: https://www.arraycomm.com/
+        status: unreachable
+    checked: '2026-09-26'
+
+apis: []
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
